@@ -1,4 +1,6 @@
-figure {
+
+/*Configuración de imágenes para las dos pantallas*/
+figure { 
     align-items: left;
     width: 30%;
     height: auto;
@@ -10,10 +12,11 @@ img {
     width: 600px;
     float: left;
 }
-
-section {
+/*Configuración de contenido primera pantalla*/
+#contentpag1 {
+    position: absolute;
      float: right;
-     left: 30% ;
+     left: 40% ;
     margin: 50px;
     text-align: center;
     height: auto;
@@ -26,31 +29,71 @@ h1 {
     color: #420934;
 }
 
+/*Configuración de textos de descripción de la herramienta para las dos pantallas*/
 .texto1 {
     font-size: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: gray;
 }
-
+/*Estilos de div tarjeta */
 #card {
     height: 200px;
     width: 350px;
     background-color: rgb(216, 211, 211);
     position: relative;
     top: 40px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
 }
-
-
+/*Estilos de input para ingresar los números de la tarjeta */
 input {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 15px;
     color: gray;
     margin: .4rem 0;
     position: relative;
-    width: 200px;
-    top: 60px;
+    width: 70%;
+    height: 30px;
+    top: 60%;
+    background-color: rgb(241, 241, 241);
+    border: 0px;
     border-radius: 5px;
 }
+/*Estilo general de los botones*/
+.button {
+    border: 2px solid #420934; 
+    padding: 6px; 
+    background-color: rgb(241, 241, 241); 
+    color: #420934; 
+    text-decoration: none; 
+    font-family: 'Helvetica', sans-serif; 
+    border-radius: 20px 0px 20px 0px;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    }
+
+footer {
+    text-align: center;
+    color: gray;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13px;
+    position: absolute;
+    width: 90%;
+    bottom: 0px;
+}
+
+/*Modificación de estilos de pantalla2*/
+#contentpag2 {
+    position: absolute;
+     float: right;
+     left: 40% ;
+    margin: 50px;
+    text-align: center;
+    height: auto;
+    width: 50%; 
+    margin-top: 10%;
+}
+

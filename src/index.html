@@ -7,23 +7,60 @@
   </head>
   <body>
     <header></header>
+  <section id="pag1" hidden>
     <figure>
       <img src="./images/videogamesjinx.png" alt="jinx lol"> 
     </figure>
 
-    <section> 
+    <section id="contentpag1"> 
       <h1>¡Hola!</h1>
       <div class="texto1"> <h2> Aquí puedes validar tu tarjeta de crédito para continuar con la compra</h2>
       </div>
 
       <div id="card">
-        <input type="number" id="numbers" name="numbers" placeholder="Inserte número de tarjeta"
+        <input type="number" id="numbers" name="numbers" placeholder="Ingresa el número de la tarjeta"
                min="1" max="10">
+      </div>
+      <div class="button">
+        <input type="button" id="buttoncontinue" href="https://vinkula.com" value="Continuar">
       </div>
     </section>
 
-    <main></main>
-    <footer></footer>
+    <footer>
+        <h3>Recuerda que no almacenamos datos sobre tu tarjeta de crédito, así que puedes usar esta herramienta con tranquilidad </h3>
+    </footer>
+
+  </section>
+
+  <section id="pag2" >
+    <figure>
+      <img src="./images/videogamesleonalol.png" alt="leona lol"> 
+    </figure>
+
+    <section id="contentpag2"> 
+      <div class="texto1"> <h2> Este es tu número de tarjeta. Para validar selecciona el botón</h2>
+      </div>
+
+      <div id="card">
+        <input type="number" id="numbers" name="numbers" placeholder="Ingresa el número de la tarjeta"
+               min="1" max="10">
+      </div>
+      <div class="button">
+      <input type="button" id="buttonvalidate" href="https://vinkula.com" value="Validar">      
+      </div>
+      <div class="button">
+      <input type="button" id="buttonreturn" value="Validar nueva"> 
+      </div>
+
+
+    </section>
+
+    <footer>
+        <h3>Gracias por utilizar esta herramienta</h3>
+    </footer>
+
+  </section>
+
     <script src="index.js" type="module"></script>
   </body>
 </html>
