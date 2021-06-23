@@ -1,0 +1,57 @@
+figure {
+    align-items: left;
+    width: 30%;
+    height: auto;
+    float: left;
+
+}
+
+img {
+    width: 600px;
+    float: left;
+}
+
+section {
+     float: right;
+     left: 30% ;
+    margin: 50px;
+    text-align: center;
+    height: auto;
+    width: 50%;
+    
+}
+
+h1 {
+    font-size: 65px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #420934;
+}
+
+.texto1 {
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: gray;
+}
+
+#card {
+    height: 200px;
+    width: 350px;
+    background-color: rgb(216, 211, 211);
+    position: relative;
+    top: 40px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+input {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: gray;
+    margin: .4rem 0;
+    position: relative;
+    width: 200px;
+    top: 60px;
+    border-radius: 5px;
+}
