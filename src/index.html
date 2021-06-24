@@ -4,13 +4,17 @@
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
+    
   </head>
   <body>
     <header></header>
-  <section id="pag1" hidden>
+
+<!-- Creación de la primera página Ingreso de información -->  
+  <section id="pag1">
     <figure>
       <img src="./images/videogamesjinx.png" alt="jinx lol"> 
     </figure>
+    <script src="index.js" type="module"></script>
 
     <section id="contentpag1"> 
       <h1>¡Hola!</h1>
@@ -21,9 +25,9 @@
         <input type="number" id="numbers" name="numbers" placeholder="Ingresa el número de la tarjeta"
                min="1" max="10">
       </div>
-      <div class="button">
-        <input type="button" id="buttoncontinue" href="https://vinkula.com" value="Continuar">
-      </div>
+      <button class="button" id="buttonContinue" onclick="showPage2()" >Continuar
+
+      </button>
     </section>
 
     <footer>
@@ -31,8 +35,9 @@
     </footer>
 
   </section>
+<!-- Creación de la segunda página- Validación de tarjeta -->  
 
-  <section id="pag2" >
+  <section id="pag2" hidden>
     <figure>
       <img src="./images/videogamesleonalol.png" alt="leona lol"> 
     </figure>
@@ -45,13 +50,9 @@
         <input type="number" id="numbers" name="numbers" placeholder="Ingresa el número de la tarjeta"
                min="1" max="10">
       </div>
-      <div class="button">
-      <input type="button" id="buttonvalidate" href="https://vinkula.com" value="Validar">      
-      </div>
-      <div class="button">
-      <input type="button" id="buttonreturn" value="Validar nueva"> 
-      </div>
 
+      <button class="button" id="buttonValidate">Validar </button>
+      <button class="button" id="buttonReturn">Validar nueva </button>
 
     </section>
 
@@ -61,6 +62,6 @@
 
   </section>
 
-    <script src="index.js" type="module"></script>
+    
   </body>
 </html>
