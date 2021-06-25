@@ -8,3 +8,8 @@ function showPage2() {
     document.getElementById("pag2").style.display = "block";
 }
 
+
+function showPage1() {
+    document.getElementById("pag2").style.display = "none";
+    document.getElementById("pag1").style.display = "block";
+}

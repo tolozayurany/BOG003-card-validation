@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
+    
     <link rel="stylesheet" href="style.css" />
     
   </head>
   <body>
-    <header></header>
-
+    
 <!-- Creación de la primera página Ingreso de información -->  
   <section id="pag1">
     <figure>
       <img src="./images/videogamesjinx.png" alt="jinx lol"> 
     </figure>
-    <script src="index.js" type="module"></script>
+    
 
     <section id="contentpag1"> 
       <h1>¡Hola!</h1>
@@ -25,8 +25,8 @@
         <input type="number" id="numbers" name="numbers" placeholder="Ingresa el número de la tarjeta"
                min="1" max="10">
       </div>
-      <button class="button" id="buttonContinue" onclick="showPage2()" >Continuar
-
+      <button class="button" id="buttonContinue" onclick="showPage2()">Continuar
+        
       </button>
     </section>
 
@@ -52,7 +52,7 @@
       </div>
 
       <button class="button" id="buttonValidate">Validar </button>
-      <button class="button" id="buttonReturn">Validar nueva </button>
+      <button class="button" id="buttonReturn" onclick="showPage1()">Validar nueva </button>
 
     </section>
 
@@ -61,7 +61,7 @@
     </footer>
 
   </section>
-
-    
+  
+  <script src="index.js" type="module"></script>
   </body>
 </html>
