@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 }, false);
 
+
+
 //Funcion para crear input en la primera página, de tipo numérico para ingresar solo números
 //Revisar si necesito esta función porque no se, creo que ya tengo el imput en html 
 
