@@ -24,7 +24,7 @@ img {
 }
 
 h1 {
-    font-size: 65px;
+    font-size: 80px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #420934;
 }
@@ -100,5 +100,13 @@ footer {
     margin-top: 10%;
 }
 
+/*Estilos a la parte donde se anuncia si es válida o no la tarjeta*/
+
+#adIsValid{
+    position: absolute;
+    text-align: center;
+    width: 90%;
+    margin-top: 0%;
+}
 
 
