@@ -1,76 +1,93 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    
-    <link rel="stylesheet" href="style.css" />
-    
-  </head>
-  <body>
-    
-<!-- Creación de la primera página Ingreso de información -->  
-  <section id="pag1" >
-    <figure>
-      <img src="./images/videogamesjinx.png" alt="jinx lol"> 
-    </figure>
-    
 
-    <section id="contentpag1"> 
+<head>
+  <meta charset="utf-8">
+  <title>Tarjeta de crédito válida</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+  <nav id ="menu">
+      <a href="/inicio/">INICIO</a> |
+      <a href="https://lan.leagueoflegends.com/es-mx/">VOLVER AL JUEGO</a> 
+  </nav>
+
+    <!-- Página de inicio y resumen del producto -->
+    <section id="inicio">
+      <div class = 'contenido'>
+				<h1>¡Bienvenido a sportrivia!</h1>
+			  <button id = 'buttonStart' >Comenzar</button>
+        </div>
+  </section>
+  <!-- Creación de la primera página Ingreso de información -->
+  <section id="pag1" hidden>
+    <figure>
+      <img src="./images/videogamesjinx.png" alt="jinx lol">
+    </figure>
+
+
+    <section id="contentpag1">
       <h1>¡Hola!</h1>
-      <div class="texto1"> <h2> Aquí puedes validar tu tarjeta de crédito para continuar con la compra</h2>
+      <div class="texto1">
+        <h2> Para continuar con la compra debemos válidar el número de tú tarjeta de crédito</h2>
       </div>
 
       <div id="card">
-        <input  type="number" id="cardNumber" placeholder="Ingresa el número de la tarjeta"
-               >
+        <input type="number" id="cardNumber" placeholder="Ingresa el número de la tarjeta">
       </div>
-      <button class="button" id="buttonContinue" >Continuar
-        
+      <button class="button" id="buttonContinue">Continuar
+
       </button>
 
-      <section id = "alert">
-        
+      <section id="alert">
+
       </section>
     </section>
 
     <footer>
-        <h3>Recuerda que no almacenamos datos sobre tu tarjeta de crédito, así que puedes usar esta herramienta con tranquilidad </h3>
+      <h3>Recuerda que no almacenamos datos sobre tu tarjeta de crédito, así que puedes usar esta herramienta con
+        tranquilidad </h3>
+
     </footer>
 
   </section>
-<!-- Creación de la segunda página- Validación de tarjeta -->  
+  <!-- Creación de la segunda página- Validación de tarjeta -->
 
   <section id="pag2" hidden>
     <figure>
-      <img src="./images/videogamesAkaliLol.png" alt="Akali lol"> 
+      <img src="./images/videogamesAkaliLol.png" alt="Akali lol">
     </figure>
 
-    <section id="contentpag2"> 
-      <div class="texto1"> <h2> Este es tu número de tarjeta. Para validar selecciona el botón</h2>
+    <section id="contentpag2">
+      <h4>Verificación de tarjeta</h4>
+      <div class="texto1">
+        <h2> Para ver si tu tarjeta es válida selecciona validar.
+          Si quieres validar otra tarjeta puedes seleccionar validar nueva</h2>
       </div>
 
       <div id="card">
-        <input type="number" id="cardNumber2" name="number" placeholder="Número de tarjeta"
-             >
+        <input type="number" id="cardNumber2" name="number" placeholder="Número de tarjeta">
       </div>
 
       <button class="button" id="buttonValidate">Validar </button>
       <button class="button" id="buttonReturn">Validar nueva </button>
-      
+
       <section id="adIsValid">
-        
+
       </section>
-        
+
 
     </section>
 
-    <footer>
-        <h3>Gracias por utilizar esta herramienta</h3>
-    </footer>
+
 
   </section>
-  
+
   <script src="index.js" type="module"></script>
-  </body>
+</body>
+
 </html>
