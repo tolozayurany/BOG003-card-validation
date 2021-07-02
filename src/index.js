@@ -1,15 +1,27 @@
 import validator from './validator.js';
 
-//Funciones para manipular el DOM en el cambio de botones - Botón de continuar 
+//Funcion para manipular el DOM en el cambio de botones - Botón de continuar
 
 document.addEventListener("DOMContentLoaded", function () {
     let button1 = document.getElementById('buttonContinue');
-    button1.onclick = function () {
+
+    button1.onclick = function showPage() {
         document.getElementById("pag1").style.display = "none";
         document.getElementById("pag2").removeAttribute("hidden");
         document.getElementById("pag2").style.display = "block";
     }
+
 }, false);
+
+/* FUNCION QUE NO PERMITE INGRESAR CAMPO VACÍO- FALTA HACER QUE LA EJECUTE PRIMERO QUE CAMBIAR DE PÁGINA
+function isNumber (creditCardNumber){
+    let creditCardNumber = document.getElementById("numbers").value;
+    if (creditCardNumber = " "){
+        document.getElementById("alert").innerHTML = "No puedes ingresar un campo vacío";        
+   }
+   else showPage();
+}
+*/
 
 //Funciones para manipular el DOM en el cambio de botones - Botón de regreso a la primera página
 document.addEventListener("DOMContentLoaded", function () {
@@ -17,35 +29,31 @@ document.addEventListener("DOMContentLoaded", function () {
     button2.onclick = function () {
         document.getElementById("pag2").style.display = "none";
         document.getElementById("pag1").style.display = "block";
+       
     }
 }, false);
 
-//Funcion para crear input en la primera página, de tipo numérico para ingresar solo números
-//Revisar si necesito esta función porque no se, creo que ya tengo el imput en html 
 
-function createInput() {
-    var padre = document.getElementById("card");
-    var input = document.createElement("INPUT");
-    padre.appendChild(input);
-    (createInput)
-};
-
-//función para llamar la variable de los números creada en el imput
-let creditCardNumber = document.getElementById("numbers").value;
-creditCardNumber;
+//Asignar el valor global de la variable
+let creditCardNumber = "";
 
 //Función para mostrar si la tarjeta es válida o no
-//Primero llamamos el evento del botón para que cuando se oprima el botón se ejecute la función
- 
-document.addEventListener("click", function () {
-    let button3 = document.getElementById('buttonValidate'); //Nos llama el botón 
-    button3.onclick = function () {
+let button3 = document.getElementById('buttonValidate'); //Se declara variable de boton
+button3.addEventListener("click", function () {
+    let validation = validator.isValid(getValue());
+    
+    console.log("creditCardNumber", creditCardNumber);
+    if (validation == true) {
 
-        let validation = validator.isValid(creditCardNumber);
-        if (validation == true) {
-            return document.getElementById('adIsValid').innerHTML = '<section id ="isValid" >Número de tarjeta correcto</section>';
-        }
-        else return document.getElementById('adIsValid').innerHTML = '<section id ="notValid">Número de tarjeta incorrecto</section>';
+        return document.getElementById('adIsValid').innerHTML = '<section id ="isValid" >Número de tarjeta correcto</section>';
     }
+    else return document.getElementById('adIsValid').innerHTML = '<section id ="notValid">Número de tarjeta incorrecto</section>';
+})
+
+ //Función que trae el valor ingresado al nuevo imput(cardNumber2) en la página de validación
+function getValue(){
+    document.getElementById("cardNumber2").value = document.getElementById("cardNumber").value;
+    let creditCardNumber = document.getElementById("cardNumber").value; 
+    console.log (creditCardNumber)
+    return creditCardNumber;
 }
-    , false);
