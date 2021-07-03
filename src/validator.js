@@ -24,7 +24,17 @@ const validator = {
     console.log(numberSum %10);
     return (numberSum % 10) == 0; //Finaliza y da el valor boolean del residuo de la suma divivido en 10 igual a 0
 
+  },
+
+  maskify: function (creditCardNumber) {
+    let cardLength = creditCardNumber.length; //Definir la variable y el largo de creditCardNumber
+    let hiddenNumber = ''; //Asigna valor vacío a la variable hiddenNumber
+      for (let i = 0; i < cardLength - 4; i++){
+        hiddenNumber += '•';
+      }
+      return hiddenNumber + creditCardNumber.substring(cardLength - 4,cardLength);
   }
 
 };
 export default validator;
+

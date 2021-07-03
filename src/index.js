@@ -1,6 +1,6 @@
 import validator from './validator.js';
 
-
+//Función para dar cambio de página del inicio a la primera página
 let buttonStart = document.getElementById('buttonStart');
 buttonStart.addEventListener("click", function () {
     document.getElementById("inicio").style.display = "none";
@@ -9,7 +9,6 @@ buttonStart.addEventListener("click", function () {
 
 });
 
-let creditCardNumber = "";
 //Funcion para manipular el DOM en el cambio de botones - Botón de continuar
 
 let button1 = document.getElementById('buttonContinue');
@@ -41,20 +40,27 @@ button2.addEventListener("click", function () {
 
 }, false);
 
+let creditCardNumber = "";
 
 //Función para mostrar si la tarjeta es válida o no
-let button3 = document.getElementById('buttonValidate'); //Se declara variable de boton
+let button3 = document.getElementById('buttonValidate'); //Se declara variable de boton Validar
 button3.addEventListener("click", function () {
-    let validation = validator.isValid(getValue());
+    let creditCardNumber = document.getElementById("cardNumber").value; //trae el valor de la variable para ejecutar el algoritmo
+    maskifyNumber(creditCardNumber);
+    let validation = validator.isValid(creditCardNumber); //Se trae el objeto validator y isValid para que tome el algoritmo Luhn
     if (validation == true) {
         return document.getElementById('adIsValid').innerHTML = '<section id ="isValid" >Número de tarjeta válido 😸 </section>';
     }
     else return document.getElementById('adIsValid').innerHTML = '<section id ="notValid">Número de tarjeta no válido ❌ </section>';
 })
 
-//Función que trae el valor ingresado al nuevo imput(cardNumber2) en la página de validación
-function getValue() {
-    document.getElementById("cardNumber2").value = document.getElementById("cardNumber").value;
-    let creditCardNumber = document.getElementById("cardNumber").value;
-    return creditCardNumber;
-}
+
+//Función que trae el valor ingresado, al nuevo imput(cardNumber2) en la página de validación mostrando ultimos 4 digitos
+function maskifyNumber(creditCardNumber) {
+    //muestra en el imput el valor de la variable
+    
+        let cardNumber = document.getElementById('cardNumber2').value = validator.maskify(creditCardNumber);
+        return cardNumber;
+     }
+
+
