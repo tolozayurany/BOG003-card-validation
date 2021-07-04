@@ -13,8 +13,17 @@ img {
     float: left;
 }
 
-#inicio{
-    background: url('./images/fondoLol.jpg') no-repeat fixed center;
+html,body{
+    color:white;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+      height:100%;
+      width:100%;
+      margin: 0px;
+    }
+
+/*Configuración de fondo de pantalla página de inicio*/
+.pageN{
+    
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -24,7 +33,32 @@ img {
     text-align: center;
 }
 
-.contenido {
+#inicio{
+    background: url('./images/FondoFlorEspiritual.png') no-repeat fixed center;
+}
+
+#cardValid{
+    background: url('./images/QiyaBackground.png') no-repeat fixed center;
+}
+
+h5 {
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    margin-top: auto;
+    height: 30%;
+}
+
+h6 {
+    font-size: 20px;
+    margin-top: auto; 
+    height: 0%;  
+}
+
+#buttonStart{
+    margin-top: 2%;
+}
+.contentPageN {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -33,7 +67,14 @@ img {
     width: 50%;
     height: 30%;
     margin: auto;
+    border: 2px solid rgb(216, 211, 211); 
+    border-radius: 0px 20px 0px 0px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 3%;
+    margin-top: auto;
 }
+
 /*Configuración de contenido primera pantalla*/
 #contentpag1 {
     position: absolute;
@@ -44,7 +85,13 @@ img {
     height: auto;
     width: 50%; 
     margin-top: 0%;
+    color:rgb(216, 211, 211);
 }
+h1 {
+    font-size: 75px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #420934;}
+
 /*Modificación de estilos de pantalla2*/
 #contentpag2 {
     position: absolute;
@@ -57,17 +104,10 @@ img {
     margin-top: 0%;
 }
 
-h1 {
-    font-size: 75px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #420934;
-}
 h4 {
     font-size: 50px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #420934;
-}
-
+    color: #420934; }
 
 /*Configuración de textos de descripción de la herramienta para las dos pantallas*/
 .texto1 {
@@ -75,6 +115,7 @@ h4 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: gray;
 }
+
 /*Estilos de div tarjeta */
 #card {
     height: 200px;
@@ -86,6 +127,7 @@ h4 {
     margin-left: auto;
     margin-right: auto;
 }
+
 /*Estilos de input para ingresar los números de la tarjeta - Selector CSS*/
 input {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -100,24 +142,27 @@ input {
     border: 0px;
     border-radius: 5px;
 }
+
 /*Estilo general de los botones*/
 .button {
     border: 2px solid #420934; 
+    border-radius: 20px 0px 20px 0px;
     padding: 4px; 
     background-color: rgba(241, 241, 241, 0.815); 
     color: #420934; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     font-weight: bold;
     font-size: 15px;
-    border-radius: 20px 0px 20px 0px;
     margin-top: 70px;
     margin-left: auto;
     margin-right: auto;
     width: 16%;
     display: inline-block;
     }
-/*Estilo individual de los botones*/
 
+.button:hover{
+    cursor:pointer;
+    }   
 
 footer {
     text-align: center;
@@ -128,7 +173,6 @@ footer {
     width: 99.5%;
     bottom: 0px;
 }
-
 
 /*Estilos a la parte donde se anuncia si es válida o no la tarjeta*/
 
@@ -143,25 +187,38 @@ footer {
     margin-top: 4%;
 }
 
-#isValid{
-    color: #5b7900;
-}
-
 #notValid{
     color: #c43d16;
 }
 
 nav {
     padding: 0;
-    margin-left: 45%;
-  margin-top: 0,5%;
-  margin-bottom: 0px;
-  height: 20px;
+    margin-left: 40%;
+    margin-top: 0;
+    margin-bottom: 0px;
+    height: 0%;
 }
 a:link {
+    background-color: rgb(29, 2, 54);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
-    color: #420934; 
+    color: white;
+    text-align: left;
+}
+
+a:visited{
+    color: white;
+}
+a:hover{
+    cursor: pointer;
+}
+
+#linkStart{
+    background-color: rgb(29, 2, 54);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
     text-align: left;
 }

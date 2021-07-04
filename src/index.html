@@ -11,33 +11,34 @@
 
 <body>
 
-  <nav id ="menu">
-      <a href="/inicio/">INICIO</a> |
-      <a href="https://lan.leagueoflegends.com/es-mx/">VOLVER AL JUEGO</a> 
+  <nav id="menu">
+    <a id = 'linkStart'>INICIO</a> |
+    <a href="https://lan.leagueoflegends.com/es-mx/"> SEGUIR COMPRANDO</a>
   </nav>
 
-    <!-- Página de inicio y resumen del producto -->
-    <section id="inicio" hidden>
-      <div class = 'contenido'>
-				<h1>¡Esta es tu página de compras!</h1>
-			  <button id = 'buttonStart' >Comenzar</button>
-        </div>
+  <!-- Página de inicio y resumen de la herramienta -->
+  <section class="pageN" id="inicio">
+    <section class = "contentPageN" id="contentInicio">
+      <h5>BIENVENIDO A TU COMPRA EN GAMING HUB </h5>
+      <h6>En esta sección validaremos tu tarjeta de crédito para continuar con la compra</h6>
+      <button class="button" id='buttonStart'>Comenzar</button>
+    </section>
   </section>
+
   <!-- Creación de la primera página Ingreso de información -->
-  <section id="pag1" >
+  <section id="pag1" hidden>
     <figure>
       <img src="./images/videogamesjinx.png" alt="jinx lol">
     </figure>
 
-
     <section id="contentpag1">
       <h1>¡Hola!</h1>
       <div class="texto1">
-        <h2> Para continuar con la compra debemos válidar el número de tú tarjeta de crédito</h2>
+        <h2> Por favor ingresa el número de tu tarjeta de crédito sin espacios ni puntos</h2>
       </div>
 
       <div id="card">
-        <input type="number" id="cardNumber" placeholder="Ingresa el número de la tarjeta">
+        <input type="number" id="cardNumber" placeholder="Número de tarjeta">
       </div>
       <button class="button" id="buttonContinue">Continuar
 
@@ -55,6 +56,7 @@
     </footer>
 
   </section>
+
   <!-- Creación de la segunda página- Validación de tarjeta -->
 
   <section id="pag2" hidden>
@@ -86,6 +88,18 @@
 
 
   </section>
+
+  <!-- Creación de la página de tarjeta válida y continuar con compra -->
+  <section class = pageN id="cardValid" hidden>
+    <section class = "contentPageN" id="contentValid">
+      <h5> TU TARJETA ES VÁLIDA </h5>
+      <section id ="cardValidNumber"> 
+      </section>
+      <h6>Ahora puedes continuar con el pago de tu compra, si quieres elegir otros productos selecciona "Seguir comprando" en el menú</h6>
+      <button class="button" id='buttonBuy'>Hacer compra</button>
+    </section>
+  </section>
+
 
   <script src="index.js" type="module"></script>
 </body>

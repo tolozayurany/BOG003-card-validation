@@ -42,25 +42,47 @@ button2.addEventListener("click", function () {
 
 let creditCardNumber = "";
 
-//Función para mostrar si la tarjeta es válida o no
+//Función para dar link a la barra de navegación -botón INICIO para returnar al principio
+
+
+
+//Función del botón para mostrar si la tarjeta es válida o no
+
 let button3 = document.getElementById('buttonValidate'); //Se declara variable de boton Validar
 button3.addEventListener("click", function () {
     let creditCardNumber = document.getElementById("cardNumber").value; //trae el valor de la variable para ejecutar el algoritmo
-    maskifyNumber(creditCardNumber);
+    maskifyNumber(creditCardNumber); //Llamamos la función que muestra el número de tarjeta oculto
     let validation = validator.isValid(creditCardNumber); //Se trae el objeto validator y isValid para que tome el algoritmo Luhn
     if (validation == true) {
-        return document.getElementById('adIsValid').innerHTML = '<section id ="isValid" >Número de tarjeta válido 😸 </section>';
+        return pageConfirmation();
     }
     else return document.getElementById('adIsValid').innerHTML = '<section id ="notValid">Número de tarjeta no válido ❌ </section>';
 })
 
-
 //Función que trae el valor ingresado, al nuevo imput(cardNumber2) en la página de validación mostrando ultimos 4 digitos
 function maskifyNumber(creditCardNumber) {
     //muestra en el imput el valor de la variable
-    
         let cardNumber = document.getElementById('cardNumber2').value = validator.maskify(creditCardNumber);
         return cardNumber;
      }
+
+ //Función que muestra página de confirmación si la tarjeta es válida
+ function pageConfirmation () {
+    document.getElementById("pag2").style.display = "none";
+        document.getElementById("cardValid").removeAttribute("hidden");
+        document.getElementById("cardValid").style.display = "block";
+        //AQUI HAY QUE PONER ESO DE QUE MUESTRE EL NÚMERO DE LA TARJETA CON LOS NÚMEROS OCULTOS , LLAMAR LA FUNCIÓN 
+        //O CREAR UNA QUI ADENTRO PARA QUE APENAS CARGUE APAREZCA EL NÚMERO DENTRO DEL DIV cardValidNumber
+    }    
+
+//Función para que la opción INICIO en el menú, me envíe a la página de inicio
+  let menuStart = document.getElementById('linkStart');
+  menuStart.addEventListener('click',function (){
+         document.getElementById("cardValid").style.display = "none";
+         document.getElementById("pag2").style.display = "none";
+         document.getElementById("pag1").style.display = "none";
+        document.getElementById("inicio").style.display = "block";
+  }
+  );
 
 
