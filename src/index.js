@@ -19,7 +19,6 @@ button1.addEventListener("click", function () {
         return false;
     }
     else {
-
         document.getElementById("pag1").style.display = "none";
         document.getElementById("pag2").removeAttribute("hidden");
         document.getElementById("pag2").style.display = "block";
@@ -27,13 +26,13 @@ button1.addEventListener("click", function () {
 }
 );
 
-//Funciones para manipular el DOM en el cambio de botones - Botón de regreso a la primera página
+//Funciones para manipular el DOM en el cambio de botones - Botón de regreso a la página de ingreso de datos
 
 let button2 = document.getElementById('buttonReturn');
 button2.addEventListener("click", function () {
     document.getElementById("pag2").style.display = "none";
     document.getElementById("pag1").style.display = "block";
-    //Las siguientes indicaciones borran los valores anteriores para volver a ejecutar el código con el botón
+    //Las siguientes indicaciones borran los valores escritos anteriormente
     document.getElementById("cardNumber").value = "";
     document.getElementById("cardNumber2").value = "";
     document.getElementById("adIsValid").innerHTML = " ";
@@ -41,10 +40,6 @@ button2.addEventListener("click", function () {
 }, false);
 
 let creditCardNumber = "";
-
-//Función para dar link a la barra de navegación -botón INICIO para returnar al principio
-
-
 
 //Función del botón para mostrar si la tarjeta es válida o no
 
@@ -62,27 +57,37 @@ button3.addEventListener("click", function () {
 //Función que trae el valor ingresado, al nuevo imput(cardNumber2) en la página de validación mostrando ultimos 4 digitos
 function maskifyNumber(creditCardNumber) {
     //muestra en el imput el valor de la variable
-        let cardNumber = document.getElementById('cardNumber2').value = validator.maskify(creditCardNumber);
-        return cardNumber;
-     }
+    document.getElementById('cardNumber2').value = validator.maskify(creditCardNumber);
+}
 
- //Función que muestra página de confirmación si la tarjeta es válida
- function pageConfirmation () {
+//Función que muestra página de confirmación si la tarjeta es válida
+function pageConfirmation() {
     document.getElementById("pag2").style.display = "none";
-        document.getElementById("cardValid").removeAttribute("hidden");
-        document.getElementById("cardValid").style.display = "block";
-        //AQUI HAY QUE PONER ESO DE QUE MUESTRE EL NÚMERO DE LA TARJETA CON LOS NÚMEROS OCULTOS , LLAMAR LA FUNCIÓN 
-        //O CREAR UNA QUI ADENTRO PARA QUE APENAS CARGUE APAREZCA EL NÚMERO DENTRO DEL DIV cardValidNumber
-    }    
+    document.getElementById("cardValid").removeAttribute("hidden");
+    document.getElementById("cardValid").style.display = "block";
+    cardNumberValid();
+}
+
+//Función que permite visualizar el número válido de la tarjeta de crédito en la última página
+function cardNumberValid() {
+    let creditCardNumber = document.getElementById("cardNumber").value;
+    document.getElementById('cardValidNumber').innerHTML = validator.maskify(creditCardNumber);
+}
 
 //Función para que la opción INICIO en el menú, me envíe a la página de inicio
-  let menuStart = document.getElementById('linkStart');
-  menuStart.addEventListener('click',function (){
-         document.getElementById("cardValid").style.display = "none";
-         document.getElementById("pag2").style.display = "none";
-         document.getElementById("pag1").style.display = "none";
-        document.getElementById("inicio").style.display = "block";
-  }
-  );
+let menuStart = document.getElementById('linkStart');
+menuStart.addEventListener('click', function () {
+    document.getElementById("cardValid").style.display = "none";
+    document.getElementById("pag2").style.display = "none";
+    document.getElementById("pag1").style.display = "none";
+    document.getElementById("inicio").style.display = "block";
+    //Las siguientes indicaciones borran los valores escritos anteriormente
+    document.getElementById("cardNumber").value = " ";
+    document.getElementById("cardNumber2").value = " ";
+    document.getElementById("adIsValid").innerHTML = " ";
+}
+);
+
+
 
 

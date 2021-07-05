@@ -1,18 +1,4 @@
-
-/*Configuración de imágenes para las dos pantallas*/
-figure { 
-    align-items: left;
-    width: 30%;
-    height: auto;
-    float: left;
-}
-
-img {
-    margin-top: 0%;
-    width: 600px;
-    float: left;
-}
-
+/*Configuración del tamaño de pantalla de html y body*/
 html,body{
     color:white;
       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
@@ -21,7 +7,57 @@ html,body{
       margin: 0px;
     }
 
-/*Configuración de fondo de pantalla página de inicio*/
+/*Estilos de la barra de navegación y los links dentro de esta*/
+
+nav {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0px;
+    height: 4%;
+    background:rgb(29, 2, 54);
+    position: absolute;
+    width: 100%;
+    text-align:  center;
+    padding-top: 0.5%;
+
+}
+a:link {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    text-decoration: none;
+}
+a:visited{
+    color: white;
+}
+a:hover{
+    cursor: pointer;
+}
+/*Estilo igual a los de los elementos nav del link que permite acceder a la primera página*/
+#linkStart{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+}    
+
+/*Configuración de imágenes para las pantallas de validación*/
+figure { 
+    align-items: left;
+    width: 30%;
+    height: auto;
+    float: left;
+}
+img {
+    margin-top: 0%;
+    width: 600px;
+    float: left;
+}
+
+/*Configuración general de los fondos de pantalla*/
 .pageN{
     
     -webkit-background-size: cover;
@@ -33,12 +69,37 @@ html,body{
     text-align: center;
 }
 
+/*Configuración individual de los fondos de cada pantalla*/
+
+/*Pantalla de inicio*/
 #inicio{
     background: url('./images/FondoFlorEspiritual.png') no-repeat fixed center;
 }
 
+/*Pantalla de tarjeta válida*/
 #cardValid{
     background: url('./images/QiyaBackground.png') no-repeat fixed center;
+}
+
+/*Pantalla de ingresar datos y de validación*/
+#pag2, #pag1{
+    background: url('./images/FondoWildRiftLol.png') no-repeat fixed center;
+}
+
+/*Estilos individuales de todos los títulos y textos*/
+h1 {
+    font-size: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #420934;
+    font-style:italic;
+    margin-bottom: 3%;
+}
+
+h4 {
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #420934; 
+    margin-bottom: 3%;
 }
 
 h5 {
@@ -54,10 +115,24 @@ h6 {
     margin-top: auto; 
     height: 0%;  
 }
-
-#buttonStart{
-    margin-top: 2%;
+/*Configuración de textos de descripción de la herramienta para las dos pantallas*/
+.texto1 {
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: gray;
 }
+/*Configuración individual del título tarjeta válida*/
+#titleValid{
+    margin-bottom: auto;
+}
+
+/*Estilos al parrafo donde se ve el número de tarjeta válido en la última página*/
+p {
+    font-size: 20px;
+}
+
+/*Estilo general del contenido de las páginas de ingreso y validación de datos*/
+
 .contentPageN {
     position: absolute;
     top: 0;
@@ -75,7 +150,7 @@ h6 {
     margin-top: auto;
 }
 
-/*Configuración de contenido primera pantalla*/
+/*Modificación de estilos de pantalla de ingreso de datos*/
 #contentpag1 {
     position: absolute;
      float: right;
@@ -84,15 +159,11 @@ h6 {
     text-align: center;
     height: auto;
     width: 50%; 
-    margin-top: 0%;
+    margin-top: 5%;
     color:rgb(216, 211, 211);
 }
-h1 {
-    font-size: 75px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #420934;}
 
-/*Modificación de estilos de pantalla2*/
+/*Modificación de estilos de pantalla de validación de tarjeta*/
 #contentpag2 {
     position: absolute;
      float: right;
@@ -101,22 +172,10 @@ h1 {
     text-align: center;
     height: auto;
     width: 50%; 
-    margin-top: 0%;
+    margin-top: 5%;
 }
 
-h4 {
-    font-size: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #420934; }
-
-/*Configuración de textos de descripción de la herramienta para las dos pantallas*/
-.texto1 {
-    font-size: 12px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: gray;
-}
-
-/*Estilos de div tarjeta */
+/*Estilos de div con forma de tarjeta */
 #card {
     height: 200px;
     width: 350px;
@@ -128,7 +187,7 @@ h4 {
     margin-right: auto;
 }
 
-/*Estilos de input para ingresar los números de la tarjeta - Selector CSS*/
+/*Estilos de input para ingresar los números de la tarjeta*/
 input {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 15px;
@@ -162,20 +221,13 @@ input {
 
 .button:hover{
     cursor:pointer;
-    }   
+    }  
 
-footer {
-    text-align: center;
-    color: rgb(107, 107, 107);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 13px;
-    position: absolute;
-    width: 99.5%;
-    bottom: 0px;
-}
+#buttonStart{
+        margin-top: 2%;
+    }
 
-/*Estilos a la parte donde se anuncia si es válida o no la tarjeta*/
-
+/*Estilos a la sección donde se anuncia la tarjeta no es válida*/
 #adIsValid{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
@@ -185,40 +237,16 @@ footer {
     left: 5%;
     width: 90%;
     margin-top: 4%;
-}
-
-#notValid{
     color: #c43d16;
 }
 
-nav {
-    padding: 0;
-    margin-left: 40%;
-    margin-top: 0;
-    margin-bottom: 0px;
-    height: 0%;
-}
-a:link {
-    background-color: rgb(29, 2, 54);
+/*Estilos a la parte del footer donde se da un anuncio sobre la seguridad de la herramienta*/
+footer {
+    text-align: center;
+    color: rgb(107, 107, 107);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    text-align: left;
-}
-
-a:visited{
-    color: white;
-}
-a:hover{
-    cursor: pointer;
-}
-
-#linkStart{
-    background-color: rgb(29, 2, 54);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    text-align: left;
+    font-size: 13px;
+    position: absolute;
+    width: 99.5%;
+    bottom: 0px;
 }
