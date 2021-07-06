@@ -14,7 +14,7 @@ nav {
     margin-top: 0;
     margin-bottom: 0px;
     height: 4%;
-    background:rgb(29, 2, 54);
+    background:#2e0e36;
     position: absolute;
     width: 100%;
     text-align:  center;
@@ -81,16 +81,12 @@ img {
     background: url('./images/QiyaBackground.png') no-repeat fixed center;
 }
 
-/*Pantalla de ingresar datos y de validación*/
-#pag2, #pag1{
-    background: url('./images/FondoWildRiftLol.png') no-repeat fixed center;
-}
 
 /*Estilos individuales de todos los títulos y textos*/
 h1 {
     font-size: 70px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #420934;
+    color: #2e0e36    ;
     font-style:italic;
     margin-bottom: 3%;
 }
@@ -98,7 +94,7 @@ h1 {
 h4 {
     font-size: 50px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #420934; 
+    color: #2e0e36    ; 
     margin-bottom: 3%;
 }
 
