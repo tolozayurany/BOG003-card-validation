@@ -9,15 +9,21 @@ En este proyecto presento una opción para validar la tarjeta de crédito cuando
 ## Investigación UX
 
 ### Los usuarios
-* Los usuarios definidos para este producto son aquellas personas que se dedican a jugar videojuegos y requieren validar sus tarjetas de crédito para hacer compras por internet con el fin de de adquirir mejoras para aumentar su rendimiento dentro del ambiente de juego (Compra de skins, pases de batalla, personajes de juegos, paquetes de juego). 
+* Los usuarios definidos para este producto son aquellas personas que se dedican a jugar videojuegos y requieren validar sus tarjetas de crédito para hacer compras dentro del juego con el fin de de adquirir mejoras para aumentar su rendimiento dentro del ambiente de juego (Compra de skins, pases de batalla, personajes de juegos, paquetes de juego). 
 
-* Nuestro **arquetipo** es un joven llamado Jaime que tiene 24 años y le encanta la industria de los videojuegos, su principal interés es ser de los mejores de su grupo de amigos e ir mejorando su nivel dentro del videojuego, por lo general aprovecha ofertas de temporada ofrecidas por las páginas de los videojuegos para realizar compras y adquirir mejoras. Valora grandemente la rápidez y funcionalidad de las herramientas que usa, así como la seguridad de la información que suministra en internet. 
+* Nuestro **arquetipo** es un joven llamado Jaime que tiene 22 años y le encanta la industria de los videojuegos, su principal interés es ser de los mejores de su grupo de amigos e ir mejorando su nivel dentro del videojuego, por lo general aprovecha ofertas de temporada ofrecidas por las páginas de los videojuegos para realizar compras y adquirir mejoras. Valora grandemente la rápidez y funcionalidad de las herramientas que usa, así como la seguridad de la información que suministra en internet. 
 
 ### La solución
 
-Este producto permite a nuestros usuarios hacer la correcta validación de su tarjeta de crédito para poder continuar con el proceso de compra de sus mejoras de videojuegos, es una herramienta sencilla de utilizar que permite realizar la acción de la validación con rápidez, lo que permite al usuario aprovechar fácilmente las ofertas que ofrece su videojuego favorito. 
+Este producto permite a nuestros usuarios hacer la correcta validación de su tarjeta de crédito para poder continuar con el proceso de compra de los productos que desea dentro de la plataforma de su videojuego, es una herramienta sencilla de utilizar que permite realizar la acción de la validación con rápidez, lo que permite al usuario aprovechar fácilmente las ofertas que ofrece su videojuego favorito. 
 
 ### Primer prototipo
+
+En este prototipo se muestran las 4 pantallas propuestas para mostrar a los usuarios y pedir el feedback.
+
+<img src= '.images/Page1y4.jpg'> 
+<img src= '.images/Page 2 y 3.jpg'> 
+
 
 ### Feedback de nuestros usuarios
 
@@ -35,3 +41,14 @@ A continuación se pueden observar las dos pantallas del prototipo realizado des
 
 [Prototipo Card Validation](https://docs.google.com/presentation/d/139TpCtv46NBYu-0wE6HcCF7SbyAPfAKBbp1d34eL8eY/edit?usp=sharing)
 
+### Pantallas finales del proyecto
+
+
+
+
+
+## Pruebas unitarias
+
+El resultado de las pruebas realizadas muestra un 100% de coverage en la funcionalidad. 
+
+<img src= '.images/Page 2 y 3.jpg'> 
