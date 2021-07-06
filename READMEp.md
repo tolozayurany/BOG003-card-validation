@@ -21,8 +21,8 @@ Este producto permite a nuestros usuarios hacer la correcta validación de su ta
 
 En este prototipo se muestran las 4 pantallas propuestas para mostrar a los usuarios y pedir el feedback.
 
-<img src= 'https://github.com/tolozayurany/BOG003-card-validation/blob/master/src/productImages/Page1y4.jpg'> 
-<img src= 'https://github.com/tolozayurany/BOG003-card-validation/blob/master/src/productImages/Page%202%20y%203.jpg'> 
+<img src= 'https://github.com/tolozayurany/BOG003-card-validation/blob/master/src/productImages/Page1y4.jpg' width="200" > 
+<img src= 'https://github.com/tolozayurany/BOG003-card-validation/blob/master/src/productImages/Page%202%20y%203.jpg'width="200"> 
 
 
 ### Feedback de nuestros usuarios
