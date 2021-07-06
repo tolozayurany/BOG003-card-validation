@@ -51,7 +51,7 @@ button3.addEventListener("click", function () {
     if (validation == true) {
         return pageConfirmation();
     }
-    else return document.getElementById('adIsValid').innerHTML = '<section id ="notValid">Número de tarjeta no válido ❌ </section>';
+    else return document.getElementById('adIsValid').innerHTML = '<section>NÚMERO DE TARJETA NO VÁLIDO ❌ </section>';
 })
 
 //Función que trae el valor ingresado, al nuevo imput(cardNumber2) en la página de validación mostrando ultimos 4 digitos
