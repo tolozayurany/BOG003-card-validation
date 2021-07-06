@@ -43,8 +43,7 @@ A continuación se pueden observar las pantallas del prototipo realizado despué
 
 ### Pantallas finales del proyecto
 
-
-
+ [Valida tu tarjeta GAMING-HUB](https://tolozayurany.github.io/BOG003-card-validation/src/index.html)
 
 
 ## Pruebas unitarias
