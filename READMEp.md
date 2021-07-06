@@ -39,15 +39,19 @@ En este prototipo se muestran las 4 pantallas propuestas para mostrar a los usua
 
 A continuación se pueden observar las pantallas del prototipo realizado después del feedback hecho por nuestros usuarios, donde se tomaron en cuenta sus consideraciones.
 
-[Prototipo Card Validation](https://docs.google.com/presentation/d/139TpCtv46NBYu-0wE6HcCF7SbyAPfAKBbp1d34eL8eY/edit?usp=sharing)
+[Pantallas de prototipo en Google Slides](https://docs.google.com/presentation/d/139TpCtv46NBYu-0wE6HcCF7SbyAPfAKBbp1d34eL8eY/edit?usp=sharing)
+
+<img src= https://github.com/tolozayurany/BOG003-card-validation/blob/master/src/productImages/PantallasPrototipo.PNG>
 
 ### Pantallas finales del proyecto
 
  [Valida tu tarjeta GAMING-HUB](https://tolozayurany.github.io/BOG003-card-validation/src/index.html)
+
+<img src= https://github.com/tolozayurany/BOG003-card-validation/blob/master/src/productImages/PantallasP%C3%A1ginaWeb.PNG width="500">
 
 
 ## Pruebas unitarias
 
 El resultado de las pruebas realizadas muestra un 100% de coverage en la funcionalidad. 
 
-<img src= 'https://github.com/tolozayurany/BOG003-card-validation/blob/master/src/productImages/unitTestYury.png'> 
+<img src= 'https://github.com/tolozayurany/BOG003-card-validation/blob/master/src/productImages/unitTestYury.png'width="500"> 
