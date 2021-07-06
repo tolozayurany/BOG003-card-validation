@@ -21,8 +21,8 @@ Este producto permite a nuestros usuarios hacer la correcta validación de su ta
 
 En este prototipo se muestran las 4 pantallas propuestas para mostrar a los usuarios y pedir el feedback.
 
-<img src= '.images/Page1y4.jpg'> 
-<img src= '.images/Page 2 y 3.jpg'> 
+<img src= 'https://github.com/tolozayurany/BOG003-card-validation/blob/master/src/productImages/Page1y4.jpg'> 
+<img src= 'https://github.com/tolozayurany/BOG003-card-validation/blob/master/src/productImages/Page%202%20y%203.jpg'> 
 
 
 ### Feedback de nuestros usuarios
@@ -37,7 +37,7 @@ En este prototipo se muestran las 4 pantallas propuestas para mostrar a los usua
 
 ### Prototipo final
 
-A continuación se pueden observar las dos pantallas del prototipo realizado después del feedback hecho por nuestros usuarios, donde se tomaron en cuenta sus consideraciones.
+A continuación se pueden observar las pantallas del prototipo realizado después del feedback hecho por nuestros usuarios, donde se tomaron en cuenta sus consideraciones.
 
 [Prototipo Card Validation](https://docs.google.com/presentation/d/139TpCtv46NBYu-0wE6HcCF7SbyAPfAKBbp1d34eL8eY/edit?usp=sharing)
 
@@ -51,4 +51,4 @@ A continuación se pueden observar las dos pantallas del prototipo realizado des
 
 El resultado de las pruebas realizadas muestra un 100% de coverage en la funcionalidad. 
 
-<img src= '.images/Page 2 y 3.jpg'> 
+<img src= 'https://github.com/tolozayurany/BOG003-card-validation/blob/master/src/productImages/unitTestYury.png'> 
