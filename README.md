@@ -1,10 +1,10 @@
-# Valida tu tarjeta - Videojuegos
+# Valida tu tarjeta - Videojuegos GAMING-HUB
+
+Desarrollado por Yurany Albarracin Toloza
 
 ## Resumen del proyecto
 
 En este proyecto presento una opción para validar la tarjeta de crédito cuando el usuario requiere realizar una compra en internet, necesita saber si el número de su tarjeta es válido o no y de esta manera continuar con la compra.
-
-## Imagen final del proyecto 
 
 ## Investigación UX
 
