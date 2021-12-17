@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Tarjeta de crédito válida</title>
+  <title>Gaming Hub</title>
 
   <link rel="stylesheet" href="style.css" />
 
@@ -11,22 +11,31 @@
 
 <body>
 
-  <nav id="menu">
-    <a id='linkStart'>INICIO</a> |
-    <a href="https://lan.leagueoflegends.com/es-mx/"> SEGUIR COMPRANDO</a>
-  </nav>
+  <header class='header-pages'>
+    <section class='logo'>
+      <img src="./images/bx-category-alt.svg" alt="logo-gaming">
+      <h2>Game Hub</h2>
+    </section>
+    <nav id="menu">
+      <a id="linkStart">INICIO</a>
+      <a href="https://lan.leagueoflegends.com/es-mx/"> SEGUIR COMPRANDO</a>
+    </nav>
+  </header>
 
   <!-- Página de inicio y resumen de la herramienta -->
-  <section class="pageN" id="inicio">
+  <section class="pageN" id="inicio" hidden>
     <section class="contentPageN" id="contentInicio">
       <h5>BIENVENIDO A TU COMPRA EN GAMING HUB </h5>
       <h6>En esta sección validaremos tu tarjeta de crédito para continuar con la compra</h6>
-      <button class="button" id='buttonStart'>Comenzar</button>
+      <button class="button" id="buttonStart">Comenzar</button>
+      <button id='btn-validate-page'>
+        hola
+      </button>
     </section>
   </section>
 
   <!-- Creación de la primera página Ingreso de información -->
-  <section id="pag1" class='pageN' hidden>
+  <section id="pag1" class="pageN" hidden>
     <figure>
       <img src="./images/videogamesjinx.png" alt="jinx lol">
     </figure>
@@ -37,16 +46,13 @@
         <h2> Por favor ingresa el número de tu tarjeta de crédito sin espacios ni puntos</h2>
       </div>
 
-      <div id="card">
+      <div class="card">
         <input type="number" id="cardNumber" placeholder="Número de tarjeta">
       </div>
       <button class="button" id="buttonContinue">Continuar
 
       </button>
 
-      <section id="alert">
-
-      </section>
     </section>
 
     <footer>
@@ -56,10 +62,55 @@
     </footer>
 
   </section>
+  <!-- Página para ingresar datos de validación de la tarjeta -->
+  <section id='validationPage' class='pageN'>
+    <section class='content-page-validation'>
+      <div class='title-validate'>
+        <p>VALIDA TU TARJETA DE</p>
+        <h2>CRÉDITO</h2>
+      </div>
+      <div class='card'>
+        <div class='images-card'>
+          <img class='img-lol' src="./images/chibiLol.png" alt="chibi-lol">
+          <img class='img-visa' src="./images/visa-logo.png" alt="visa-logo">
+        </div>
+        <div>
+          <h3 id="card-number"> •••• •••• •••• ••••</h3>
+        </div>
+      </div>
+      <input id="input-number" type="number" placeholder="Escribe tú número de tarjeta">
+      <button id='validate' class='button'> VALIDAR
+
+      </button>
+    </section>
+  </section>
+
+  <!-- Página para mostrar resultados de la validación de la tarjeta -->
+  <section id='resultValidatePage' class='pageN' hidden>
+    <section class='content-page-validation'>
+      <div class='title-validate'>
+        <p>VALIDA TU TARJETA DE</p>
+        <h2>CRÉDITO</h2>
+      </div>
+      <div class='card'>
+        <div class='images-card'>
+          <img class='img-lol' src="./images/chibiLol.png" alt="chibi-lol">
+          <img class='img-visa' src="./images/visa-logo.png" alt="visa-logo">
+        </div>
+        <div>
+          <h3> VÁLIDA</h3>
+          <h3 id="card-number-result"> •••• •••• •••• ••••</h3>
+        </div>
+      </div>
+      <button id='validate-other' class='button'> VALIDAR OTRA
+
+      </button>
+    </section>
+  </section>
 
   <!-- Creación de la segunda página- Validación de tarjeta -->
 
-  <section id="pag2" class='pageN' hidden>
+  <section id="pag2" class="pageN" hidden>
     <figure>
       <img src="./images/videogamesAkaliLol.png" alt="Akali lol">
     </figure>
@@ -71,7 +122,7 @@
           Si quieres validar otra tarjeta puedes seleccionar validar nueva</h2>
       </div>
 
-      <div id="card">
+      <div class="card">
         <input type="text" id="cardNumber2" name="number">
       </div>
 
@@ -82,15 +133,12 @@
 
       </section>
 
-
     </section>
-
-
 
   </section>
 
   <!-- Creación de la página de tarjeta válida y continuar con compra -->
-  <section class=pageN id="cardValid" hidden>
+  <section class="pageN" id="cardValid" hidden>
     <section class="contentPageN" id="contentValid">
       <h5 id="titleValid"> TU TARJETA ES VÁLIDA </h5>
       <p>
@@ -98,7 +146,8 @@
       </p>
       <h6>Ahora puedes continuar con el pago de tu compra, si quieres elegir otros productos selecciona "Seguir
         comprando" en el menú</h6>
-      <button class="button" id='buttonBuy' href = 'https://lan.leagueoflegends.com/es-mx/news/riot-games/'>Hacer compra</button>
+      <button class="button" id="buttonBuy" href="https://lan.leagueoflegends.com/es-mx/news/riot-games/">Hacer
+        compra</button>
     </section>
   </section>
 

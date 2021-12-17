@@ -19,7 +19,6 @@ const validator = {
       numberSum += numberDigit; //Sumar todos los valores de la tarjeta
       validate = !validate;
     }
-    console.log(numberSum % 10);
     return (numberSum % 10) == 0; //Finaliza y da el valor boolean del residuo de la suma divivido en 10 igual a 0
 
   },
