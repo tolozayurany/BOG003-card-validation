@@ -1,120 +1,70 @@
 import validator from './validator.js';
 
-//Función para dar cambio de página del inicio a la primera página
-let buttonStart = document.getElementById('buttonStart');
-buttonStart.addEventListener("click", function () {
-    document.getElementById("inicio").style.display = "none";
-    document.getElementById("pag1").removeAttribute("hidden");
-    document.getElementById("pag1").style.display = "block";
-
-});
-
-//Funcion para manipular el DOM en el cambio de botones - Botón de continuar
-
-let button1 = document.getElementById('buttonContinue');
-button1.addEventListener("click", function () {
-    let creditCardNumber = document.getElementById("cardNumber").value;
-    if (creditCardNumber.length == 0 || /^\s+$/.test(creditCardNumber)) {
-        alert("No puedes ingresar un campo vacío");
-        return false;
-    }
-    else {
-        document.getElementById("pag1").style.display = "none";
-        document.getElementById("pag2").removeAttribute("hidden");
-        document.getElementById("pag2").style.display = "block";
-    }
-}
-);
-
-//Funciones para manipular el DOM en el cambio de botones - Botón de regreso a la página de ingreso de datos
-
-let button2 = document.getElementById('buttonReturn');
-button2.addEventListener("click", function () {
-    document.getElementById("pag2").style.display = "none";
-    document.getElementById("pag1").style.display = "block";
-    //Las siguientes indicaciones borran los valores escritos anteriormente
-    document.getElementById("cardNumber").value = "";
-    document.getElementById("cardNumber2").value = "";
-    document.getElementById("adIsValid").innerHTML = " ";
-}, false);
-
 let btnValidationPage = document.getElementById('btn-validate-page');
-btnValidationPage.addEventListener("click", () => {
-    document.getElementById("inicio").style.display = "none";
-    document.getElementById("validationPage").style.display = "block";
-    //Las siguientes indicaciones borran los valores escritos anteriormente
+btnValidationPage.addEventListener('click', () => {
+    document.getElementById('inicio').style.display = 'none';
+    document.getElementById('validationPage').style.display = 'block';
 }, false);
 
 /* Mostrar en el texto el número ingresado en el input */
-
-document.getElementById('input-number').addEventListener("blur" , () => {
-    const valueNumber = document.getElementById('input-number').value;
-    document.getElementById('card-number').textContent = valueNumber;
+document.getElementById('input-number').addEventListener('blur', () => {
+    const cardNumber = document.getElementById('input-number').value;
+    document.getElementById('card-number').textContent = cardNumber;
 });
 
 /* Click para cambiar de pantalla y mostrar si es válida o no la tarjeta */
-
-document.getElementById('validate').addEventListener("click" , () => {
-    const valueNumber = document.getElementById('input-number').value;
-    document.getElementById("validationPage").style.display = "none";
-    document.getElementById("resultValidatePage").style.display = "block"
-    document.getElementById('card-number-result').textContent = valueNumber;
+document.getElementById('validate').addEventListener('click', () => {
+    const cardNumber = document.getElementById('input-number').value;
+    const sumCard = cardNumber.split('').reduce((a, b) => parseInt(a) + parseInt(b), 0)
+    /* Comprobar si el campo está vacío y es diferente a 0 */
+    if ((cardNumber.length == 0 || /^\s+$/.test(cardNumber) || sumCard == 0)) {
+        document.getElementById('input-number').style.borderColor = '#c93c3ce1';
+        document.getElementById('input-number').placeholder = 'Ingresa un número válido';
+        return false;
+    }
+    else {
+        document.getElementById('validationPage').style.display = 'none';
+        document.getElementById('resultValidatePage').style.display = 'block';
+        document.getElementById('card-number-result').textContent = cardNumber;
+        validateCard();
+    }
 });
 
-/* Click para ir a la pantalla de validación */
-document.getElementById('validate-other').addEventListener("click" , () => {
-    document.getElementById("resultValidatePage").style.display = "none"
-    document.getElementById("validationPage").style.display = "block";
+/* Click para regresar a la pantalla de ingreso de datos */
+document.getElementById('validate-other').addEventListener('click', () => {
+    document.getElementById('resultValidatePage').style.display = 'none'
+    document.getElementById('validationPage').style.display = 'block';
     document.getElementById('card-number').textContent = '•••• •••• •••• ••••';
     document.getElementById('input-number').value = ' ';
+    document.getElementById('input-number').placeholder = 'Escribe aquí tu número de tarjeta';
+    document.getElementById('input-number').style.borderColor = 'gray';
 });
 
-
-
-//Función del botón para mostrar si la tarjeta es válida o no
-
-let button3 = document.getElementById('buttonValidate'); //Se declara variable de boton Validar
-button3.addEventListener("click", function () {
-    let creditCardNumber = document.getElementById("cardNumber").value; //trae el valor de la variable para ejecutar el algoritmo
-    maskifyNumber(creditCardNumber); //Llamamos la función que muestra el número de tarjeta oculto
-    let validation = validator.isValid(creditCardNumber); //Se trae el objeto validator y isValid para que tome el algoritmo Luhn
-    if (validation == true) {
-        return pageConfirmation();
+/* Función del botón para mostrar si la tarjeta es válida o no */
+const validateCard = () => {
+    const cardNumber = document.getElementById('input-number').value;
+    maskifyNumber(cardNumber); // Llamamos la función que muestra el número de tarjeta oculto
+    const validation = validator.isValid(cardNumber); // Se trae el objeto validator y isValid para que tome el algoritmo Luhn
+    if (validation) {
+        return document.getElementById('msj-validate').textContent = 'VÁLIDA';
     }
-    else return document.getElementById('adIsValid').innerHTML = '<section>NÚMERO DE TARJETA NO VÁLIDO ❌ </section>';
-})
-
-//Función que trae el valor ingresado, al nuevo imput(cardNumber2) en la página de validación mostrando ultimos 4 digitos
-function maskifyNumber(creditCardNumber) {
-    //muestra en el imput el valor de la variable
-    document.getElementById('cardNumber2').value = validator.maskify(creditCardNumber);
+    else return document.getElementById('msj-validate').textContent = 'NO VÁLIDA';
 }
 
-//Función que muestra página de confirmación si la tarjeta es válida
-function pageConfirmation() {
-    document.getElementById("pag2").style.display = "none";
-    document.getElementById("cardValid").removeAttribute("hidden");
-    document.getElementById("cardValid").style.display = "block";
-    cardNumberValid();
+/* Función que trae el valor ingresado mostrando solo los últimos 4 digitos */
+const maskifyNumber = (creditCardNumber) => {
+    /* imprime el valor del input en el h3 card-number-result */
+    document.getElementById('card-number-result').textContent = validator.maskify(creditCardNumber);
 }
 
-//Función que permite visualizar el número válido de la tarjeta de crédito en la última página
-function cardNumberValid() {
-    let creditCardNumber = document.getElementById("cardNumber").value;
-    document.getElementById('cardValidNumber').innerHTML = validator.maskify(creditCardNumber);
-}
-
-//Función para que la opción INICIO en el menú, me envíe a la página de inicio
+/* Función para que la opción INICIO en el menú envíe a la página de inicio */
 let menuStart = document.getElementById('linkStart');
-menuStart.addEventListener('click', function () {
-    document.getElementById("cardValid").style.display = "none";
-    document.getElementById("pag2").style.display = "none";
-    document.getElementById("pag1").style.display = "none";
-    document.getElementById("inicio").style.display = "block";
-    //Las siguientes indicaciones borran los valores escritos anteriormente
-    document.getElementById("cardNumber").value = " ";
-    document.getElementById("cardNumber2").value = " ";
-    document.getElementById("adIsValid").innerHTML = " ";
+menuStart.addEventListener('click', () => {
+    document.getElementById('inicio').style.display = 'block';
+    document.getElementById('validationPage').style.display = 'none';
+    document.getElementById('resultValidatePage').style.display = 'none';
+    document.getElementById('card-number').textContent = '•••• •••• •••• ••••';
+    document.getElementById('input-number').value = ' ';
 }
 );
 
