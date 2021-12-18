@@ -1,6 +1,6 @@
 # Valida tu tarjeta - Videojuegos GAME-HUB
 
-<img src='src\productImages\GameHubLogo.png' >
+<img src='src\productImages\GameHubLogo.PNG' >
 
 Desarrollado por Yurany Albarracin Toloza (Yury)
 
@@ -40,15 +40,17 @@ A continuación se pueden observar las pantallas del prototipo realizado despué
 
 [Pantallas de prototipo en Figma](https://www.figma.com/file/riyeb1g9ibVOjRhHQceCcE/Gaming-Hub?node-id=0%3A1)
 
-<img src= https://github.com/tolozayurany/BOG003-card-validation/blob/master/src/productImages/PantallasPrototipo.PNG >
+<img src='src\productImages\Desktop1.png' width="400" >
+<img src='src\productImages\Desktop2.png' width="400" >
+<img src='src\productImages\Desktop3.png' width="400" >
 
 ### Pantallas finales del proyecto
 
  [Valida tu tarjeta GAMING-HUB](https://tolozayurany.github.io/GamingHub/src/)
 
-<img src='src\productImages\Desktop1.png' width="400" >
-<img src='src\productImages\Desktop2.png' width="400" >
-<img src='src\productImages\Desktop3.png' width="400" >
+<img src='src\productImages\Pant1.PNG' width="600" >
+<img src='src\productImages\Pant2.PNG' width="600" >
+<img src='src\productImages\Pant3.PNG' width="600" >
 
 ## Pruebas unitarias
 
