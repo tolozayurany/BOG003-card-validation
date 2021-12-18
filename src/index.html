@@ -4,13 +4,15 @@
 <head>
   <meta charset="utf-8">
   <title>Gaming Hub</title>
-
   <link rel="stylesheet" href="style.css" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,700&family=Questrial&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
   <header class='header-pages'>
     <section class='logo'>
       <img src="./images/bx-category-alt.svg" alt="logo-gaming">
@@ -23,47 +25,21 @@
   </header>
 
   <!-- Página de inicio y resumen de la herramienta -->
-  <section class="pageN" id="inicio" hidden>
+  <section class="pageN" id="inicio" >
     <section class="contentPageN" id="contentInicio">
-      <h5>BIENVENIDO A TU COMPRA EN GAMING HUB </h5>
-      <h6>En esta sección validaremos tu tarjeta de crédito para continuar con la compra</h6>
-      <button class="button" id="buttonStart">Comenzar</button>
-      <button id='btn-validate-page'>
-        hola
+      <div class='title-validate'>
+        <h2> COMPRAS GAME HUB </h2>
+      </div>
+      <p class='info-text'>Aquí validaremos tu tarjeta de crédito para continuar con la compra</p>
+      <button class='button' id='btn-validate-page'>
+        CONTINUAR
       </button>
     </section>
   </section>
 
-  <!-- Creación de la primera página Ingreso de información -->
-  <section id="pag1" class="pageN" hidden>
-    <figure>
-      <img src="./images/videogamesjinx.png" alt="jinx lol">
-    </figure>
 
-    <section id="contentpag1">
-      <h1>¡HOLA!</h1>
-      <div class="texto1">
-        <h2> Por favor ingresa el número de tu tarjeta de crédito sin espacios ni puntos</h2>
-      </div>
-
-      <div class="card">
-        <input type="number" id="cardNumber" placeholder="Número de tarjeta">
-      </div>
-      <button class="button" id="buttonContinue">Continuar
-
-      </button>
-
-    </section>
-
-    <footer>
-      <h3>Recuerda que no almacenamos datos sobre tu tarjeta de crédito, así que puedes usar esta herramienta con
-        tranquilidad </h3>
-
-    </footer>
-
-  </section>
   <!-- Página para ingresar datos de validación de la tarjeta -->
-  <section id='validationPage' class='pageN'>
+  <section id='validationPage' class='pageN' hidden>
     <section class='content-page-validation'>
       <div class='title-validate'>
         <p>VALIDA TU TARJETA DE</p>
@@ -78,11 +54,14 @@
           <h3 id="card-number"> •••• •••• •••• ••••</h3>
         </div>
       </div>
-      <input id="input-number" type="number" placeholder="Escribe tú número de tarjeta">
+      <input id="input-number" type="number" placeholder="Escribe aquí tú número de tarjeta">
+      <p id='warning-msj'></p>
       <button id='validate' class='button'> VALIDAR
-
       </button>
     </section>
+    <!-- <footer>
+      <p class='info-text'> No almacenamos datos sobre tu tarjeta de crédito</p>
+    </footer> -->
   </section>
 
   <!-- Página para mostrar resultados de la validación de la tarjeta -->
@@ -97,60 +76,15 @@
           <img class='img-lol' src="./images/chibiLol.png" alt="chibi-lol">
           <img class='img-visa' src="./images/visa-logo.png" alt="visa-logo">
         </div>
-        <div>
-          <h3> VÁLIDA</h3>
-          <h3 id="card-number-result"> •••• •••• •••• ••••</h3>
+        <div >
+          <p id='msj-validate'> </p>
+          <h3 id="card-number-result"> </h3>
         </div>
       </div>
       <button id='validate-other' class='button'> VALIDAR OTRA
-
       </button>
     </section>
   </section>
-
-  <!-- Creación de la segunda página- Validación de tarjeta -->
-
-  <section id="pag2" class="pageN" hidden>
-    <figure>
-      <img src="./images/videogamesAkaliLol.png" alt="Akali lol">
-    </figure>
-
-    <section id="contentpag2">
-      <h4>Verificación de tarjeta</h4>
-      <div class="texto1">
-        <h2> Para ver si tu tarjeta es válida selecciona validar.
-          Si quieres validar otra tarjeta puedes seleccionar validar nueva</h2>
-      </div>
-
-      <div class="card">
-        <input type="text" id="cardNumber2" name="number">
-      </div>
-
-      <button class="button" id="buttonValidate">Validar </button>
-      <button class="button" id="buttonReturn">Validar nueva </button>
-
-      <section id="adIsValid" value="0">
-
-      </section>
-
-    </section>
-
-  </section>
-
-  <!-- Creación de la página de tarjeta válida y continuar con compra -->
-  <section class="pageN" id="cardValid" hidden>
-    <section class="contentPageN" id="contentValid">
-      <h5 id="titleValid"> TU TARJETA ES VÁLIDA </h5>
-      <p>
-        TARJETA DE CRÉDITO No: <span id="cardValidNumber"></span>
-      </p>
-      <h6>Ahora puedes continuar con el pago de tu compra, si quieres elegir otros productos selecciona "Seguir
-        comprando" en el menú</h6>
-      <button class="button" id="buttonBuy" href="https://lan.leagueoflegends.com/es-mx/news/riot-games/">Hacer
-        compra</button>
-    </section>
-  </section>
-
 
   <script src="index.js" type="module"></script>
 </body>
